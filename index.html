@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Welcome to Hangman!</h1>
+        <p>Guess the word by entering letters. You have limited guesses. Good luck!</p>
+        
+        <!-- Image that pops up in the center -->
+        <img id="start-image" src="stickman2.jpg" alt="Start Image" class="centered-image">
+        
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Game Screen (Hangman UI) -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <h1>Hangman Game</h1>
+        <p id="word-display"></p>
+        <p>Wrong guesses: <span id="wrong-guesses">0</span>/6</p>
+        <p id="message"></p>
+        <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
+        <button id="guess-btn">Guess</button>
+        <button id="restart-btn">Restart</button>
+
+        <!-- Canvas for the Hangman Stickman -->
+        <canvas id="hangman-canvas" width="300" height="300"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
